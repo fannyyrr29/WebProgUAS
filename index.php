@@ -19,29 +19,37 @@
         , array("SKU"=>"AS005", "Merk"=>"Samsung", "Model"=>"Galaxy S21 FE", "Harga"=>9999000, "url_gambar"=>"https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//108/MTA-95639066/samsung_samsung_galaxy_s21_fe_smartphone_-8-256gb-_full07_e6311212.jpg","spec"=>array("6GB", "5G", "5000mAH", "256GB"))
         , array("SKU"=>"AX005", "Merk"=>"Xiaomi", "Model"=>"Xiaomi POCO M3", "Harga" => 2469000, "url_gambar"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa9CZfTHq8xeemqUhx-hqynbWrvvALWy_0Jw&s", "spec"=>array("4GB", "4G", "6000mAH", "128GB"))
         , array("SKU"=>"AR005", "Merk"=>"Redmi", "Model"=>"Redmi Note 12", "Harga"=>3729000, "url_gambar"=>"https://i01.appmifile.com/webfile/globalimg/id/cms/3E7C39EE-E38A-31B1-B9FC-06246776D87B!800x800!85.jpg" ,"spec"=>array("6GB", "5G", "5000mAH", "256GB"))
-        , array("SKU"=>"AO004", "Merk" => "Oppo", "Model"=>"Oppo A78 5G", "Harga"=>3999000, "url_gambar"=>"https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/107/MTA-137982338/oppo_hp-oppo-a78-5g-8-128-gb-5000mah_full9.jpg", "spec"=>array("8GB", "5G", "5000mAH", "128GB"))
-
-
-
-
-        
-
+        , array("SKU"=>"AO004", "Merk" => "Oppo", "Model"=>"Oppo A78 5G", "Harga"=>3999000, "url_gambar"=>"https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/107/MTA-137982338/oppo_hp-oppo-a78-5g-8-128-gb-5000mah_full9.jpg", "spec"=>array("8GB", "5G", "5000mAH", "128GB"))       
         
     );
 
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Programming UAS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div id="navigation" class="text-center">
+            <img src="https://picsum.photos/200" alt="picture" class="nav-pict">
+            <h1 style="margin-top: 20px;">Toko Hape</h1>
+        </div>    
+        <div id="content">
+            <div id="card-container">
+                <div class="card">
+                    <img src="https://picsum.photos/200/250" alt="" class="photo-handphone">
+                    <div class="card-description">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt pariatur eligendi blanditiis quas tenetur quo.<p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

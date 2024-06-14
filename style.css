@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navigation{
+    float: left;
+    width: 250px;
+    height: 100vh;
+    /* position: fixed ; */
+    background-color: lightseagreen;
+}
+
+#content {
+    height: 100%;
+    background-color: lightcyan;
+    float: left;
+    width: calc(100% - 250px);
+}
+
+.container{
+    width: 100%
+}
+.nav-pict{
+    border-radius: 50%;
+    margin: 2rem auto 1rem auto;
+}
+.text-center{
+    text-align: center;
+}
+
+#card-container{
+    padding: 50px 50px 50px 50px;
+}
+.card{
+    width: 200px;
+}
+.card-description{
+    padding:10px 0 10px 0;
+}
