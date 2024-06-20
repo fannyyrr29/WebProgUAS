@@ -34,6 +34,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        input[type='checkbox']:checked{
+            background-color: orangered;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -45,33 +50,70 @@
         </div>
         <div id="content">
             <div class="card-container">
-                <?php foreach ($arrHape as $key => $value) :?>
-                    <div class="card">
-                        <img src="<?php echo $value['url_gambar']?>" class="card-img">
-                        <div class="card-description">
-                            <p class="card-title">
-                                <?php echo $value['Merk'] . " " . $value['Model'];?>  
-                            </p>
-                            
-                            <p id="price"><span class="rp">Rp </span><?php echo $value['Harga'];?></p>
-                            <div class="spec">
-                                <p>Spesifikasi</p>
-                                <ul class="card-spec">
-                                    <li>RAM : <span>4GB</span></li>
-                                    <li>Internet : <span>5G</span></li>
-                                    <li>Baterai : <span>5000mAH</span></li>
-                                    <li>Storage : <span>256GB</span></li>
-                                </ul>
+                <form action="bandingkan.php" method="post">
+                    <?php foreach ($arrHape as $key => $value) :?>
+                        <div class="card">
+                            <img src="<?php echo $value['url_gambar']?>" class="card-img">
+                            <div class="card-description">
+                                <p class="card-title">
+                                    <?php echo $value['Merk'] . " " . $value['Model'];?>  
+                                </p>
+                                
+                                <p id="price"><span class="rp">Rp </span><?php echo $value['Harga'];?></p>
+                                <div class="spec">
+                                    <p>Spesifikasi</p>
+                                    <ul class="card-spec">
+                                        <li>RAM : <span><?php echo $value['spec'][0]?></span></li>
+                                        <li>Internet : <span><?php echo $value['spec'][1]?></span></li>
+                                        <li>Baterai : <span><?php echo $value['spec'][2]?></span></li>
+                                        <li>Storage : <span><?php echo $value['spec'][3]?></span></li>
+                                    </ul>
+                                </div>
+                                
                             </div>
+                            <label for="hape<?php echo $value['SKU']; ?>">
+                                <input class="checkbox" type="checkbox" name="hape[]" value="<?php echo $value['SKU']; ?>" id="hape<?php echo $value['SKU'];?>">
+                            Pilih</label>
+                             
+                            <input type="hidden" name="merk_<?php echo $value['SKU']; ?>" value="<?php echo $value['Merk']; ?>">
+                            <input type="hidden" name="model_<?php echo $value['SKU']; ?>" value="<?php echo $value['Model']; ?>">
+                            <input type="hidden" name="harga_<?php echo $value['SKU']; ?>" value="<?php echo $value['Harga']; ?>">
+                            <input type="hidden" name="gambar_<?php echo $value['SKU']; ?>" value="<?php echo $value['url_gambar']; ?>">
+                            <input type="hidden" name="ram_<?php echo $value['SKU']; ?>" value="<?php echo $value['spec'][0]; ?>">
+                            <input type="hidden" name="internet_<?php echo $value['SKU']; ?>" value="<?php echo $value['spec'][1]; ?>">
+                            <input type="hidden" name="baterai_<?php echo $value['SKU']; ?>" value="<?php echo $value['spec'][2]; ?>">
+                            <input type="hidden" name="storage_<?php echo $value['SKU']; ?>" value="<?php echo $value['spec'][3]; ?>">
                             
-                        </div>
-                        <form action=""></form>
-                    </div>   
-                <?php endforeach;?>
+                        </div>   
+                    <?php endforeach;?>
+                    <input type="submit" name="submit" value="COMPARE" id="btnBanding">
+                </form>
             </div>
-        </div>
-        <div class="clear"></div>
+        </div>  
     </div>
-    <script type="text/javascript" href="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function updateCheckedCount() {
+                let checkedCount = $('input[type="checkbox"]:checked').length;
+                if (checkedCount === 3) {
+                    $("#btnBanding").removeAttr("disabled");
+                }
+                else{
+                    $("#btnBanding").attr("disabled", true);
+                }
+            }
+        
+            // Initially update count on page load
+            updateCheckedCount();
+            
+            // Attach change event handler to checkboxes
+            $('input[type="checkbox"]').change(function() {
+                // Call updateCheckedCount function when checkbox state changes
+                updateCheckedCount();
+            });
+            
+        });
+    </script>
 </body>
 </html>

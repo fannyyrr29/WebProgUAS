@@ -34,10 +34,24 @@ body{
 }
 
 /*Content*/
+#btnBanding{
+    width: 150px;
+    height: 50px;
+    background-color: orangered;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(80%);
+}
 #content{
     background-color: rgb(245, 245, 245);
-    padding: 25px;
     height: auto;
+    position: relative;
+    padding: 20px 100px;
 }
 .card-title{
     font-size: 1.2rem;
@@ -66,7 +80,6 @@ body{
     margin-bottom: 10px;
     width: 250px;
     height: 220px;
-    /* border-radius: 15px; */
 }
 .card-description{
     text-align: left;
@@ -81,3 +94,13 @@ body{
     color: rgb(121, 119, 119);
     font-weight: 200;
 }
+
+input:checked {
+    background-color: orangered;
+}
+
+@media only screen and (max-width: 1450px) {
+    #content{
+        padding:20px 15px;
+    }
+  }
