@@ -1,40 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    font-size: 62,5%;
-}
-body{
+/* html {
+    font-size: 62.5%;
+} */
+body {
     font-family: "Inter", sans-serif;
     font-weight: 500;
 }
 
-
-.container{
+.container {
     height: auto;
     display: grid;
     grid-template-columns: 250px 1fr;
-    
 }
 
 /* Navbar */
-#navbar{
+#navbar {
     background-color: rgb(255, 255, 255);
     height: auto;
     box-shadow: black 20px;
 }
-.navbar-container{
+.navbar-container {
     text-align: center;
     padding-top: 50px;
 }
-.img-navbar{
+.img-navbar {
     border-radius: 50%;
 }
 
-/*Content*/
-#btnBanding{
+/* Content */
+#btnBanding {
     width: 150px;
     height: 50px;
     background-color: orangered;
@@ -46,26 +44,33 @@ body{
     bottom: 20px;
     right: 50%;
     transform: translateX(80%);
+    cursor: pointer;
 }
-#content{
+
+#btnBanding:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#content {
     background-color: rgb(245, 245, 245);
     height: auto;
     position: relative;
     padding: 20px 100px;
 }
-.card-title{
+.card-title {
     font-size: 1.2rem;
 }
 
-#price{
+#price {
     margin: 10px;
     font-size: 1.1rem;
     color: orangered;
 }
-.rp{
+.rp {
     font-size: 1rem;
 }
-.card{
+.card {
     float: left;
     margin: 30px 20px;
     text-align: center;
@@ -74,23 +79,21 @@ body{
     overflow: hidden;
     width: 250px;
     box-shadow: 0 0 0 0.8rem rgba(255, 255, 255, 0.8);
-
 }
-.card-img{
+.card-img {
     margin-bottom: 10px;
     width: 250px;
     height: 220px;
 }
-.card-description{
+.card-description {
     text-align: left;
     padding-left: 10px;
 }
-.title{
+.title {
     color: #2267e6;
     font-size: 2rem;
 }
-
-.card-spec{
+.card-spec {
     color: rgb(121, 119, 119);
     font-weight: 200;
 }
@@ -100,7 +103,7 @@ input:checked {
 }
 
 @media only screen and (max-width: 1450px) {
-    #content{
-        padding:20px 15px;
+    #content {
+        padding: 20px 15px;
     }
-  }
+}

@@ -98,9 +98,11 @@
                 let checkedCount = $('input[type="checkbox"]:checked').length;
                 if (checkedCount === 3) {
                     $("#btnBanding").removeAttr("disabled");
+                    $('input[type="checkbox"]:not(:checked)').attr("disabled", true);
                 }
                 else{
                     $("#btnBanding").attr("disabled", true);
+                    $('input[type="checkbox"]').removeAttr("disabled");
                 }
             }
         
