@@ -28,18 +28,22 @@ body.dark-mode {
     height: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 body.dark-mode #navbar {
     background-color: #1F2833;
 }
+
 .navbar-container {
     text-align: center;
     padding: 20px 0;
 }
+
 .img-navbar {
     border-radius: 50%;
     width: 150px;
     height: 150px;
 }
+
 h1 {
     color: #EDE8F5;
     font-size: 2.4rem;
@@ -49,7 +53,7 @@ h1 {
 #btnBanding {
     width: 150px;
     height: 50px;
-    background-color: #66FCF1;
+
     border: none;
     border-radius: 10px;
     font-size: 1.1rem;
@@ -60,11 +64,21 @@ h1 {
     transform: translateX(80%);
     cursor: pointer;
 }
-body.dark-mode #btnBanding {
-    background-color: #45A29E;
+
+#btnBanding:enabled {
+    background-color: #66FCF1;
 }
 
 #btnBanding:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+body.dark-mode #btnBanding:enabled {
+    background-color: #45A29E;
+}
+
+body.dark-mode #btnBanding:disabled {
     background-color: grey;
     cursor: not-allowed;
 }
@@ -75,14 +89,17 @@ body.dark-mode #btnBanding {
     position: relative;
     padding: 20px 100px;
 }
+
 body.dark-mode #content {
     background-color: #0B0C10;
 }
+
 .card-title {
     font-size: 1.4rem;
     color: #3D52A0;
     font-weight: bold;
 }
+
 body.dark-mode .card-title {
     color: #66FCF1;
 }
@@ -93,12 +110,15 @@ body.dark-mode .card-title {
     color: #66FCF1;
     font-weight: bold;
 }
+
 body.dark-mode #price {
     color: #45A29E;
 }
+
 .rp {
     font-size: 1rem;
 }
+
 .card {
     float: left;
     margin: 30px 20px;
@@ -112,57 +132,69 @@ body.dark-mode #price {
     transition: transform 0.2s, box-shadow 0.2s;
     padding: 20px;
 }
+
 body.dark-mode .card {
     background-color: #1F2833;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
+
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 body.dark-mode .card:hover {
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
+
 .card-img {
     margin-bottom: 10px;
     width: 100%;
     height: 220px;
     object-fit: contain;
 }
+
 .card-description {
     text-align: left;
     padding: 10px;
     height: 200px;
 }
+
 .spec p {
     font-weight: bold;
     color: #3D52A0;
 }
+
 body.dark-mode .spec p {
     color: #66FCF1;
 }
+
 .card-spec {
     color: #8697C4;
     font-weight: 500;
     margin-top: 5px;
 }
+
 body.dark-mode .card-spec {
     color: #C5C6C7;
 }
 
 /* Styling for checkbox and label */
+
 .checkbox-container {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
     text-align: center;
 }
+
 input[type='checkbox'] {
     display: inline-block;
     margin-right: 5px;
 }
-input[type='checkbox'] + label {
+
+input[type='checkbox']+label {
     display: inline-block;
     padding: 10px 20px;
     background-color: #3D52A0;
@@ -171,20 +203,17 @@ input[type='checkbox'] + label {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-input[type='checkbox'] + label:hover {
-    background-color: #7091E6;
-}
-input[type='checkbox']:checked + label {
+
+input[type='checkbox']:checked+label {
     background-color: #8697C4;
 }
-body.dark-mode input[type='checkbox'] + label {
+
+body.dark-mode input[type='checkbox']+label {
     background-color: #45A29E;
     color: #0B0C10;
 }
-body.dark-mode input[type='checkbox'] + label:hover {
-    background-color: #66FCF1;
-}
-body.dark-mode input[type='checkbox']:checked + label {
+
+body.dark-mode input[type='checkbox']:checked+label {
     background-color: #C5C6C7;
 }
 
