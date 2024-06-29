@@ -20,7 +20,6 @@
         , array("SKU"=>"AX005", "Merk"=>"Xiaomi", "Model"=>"POCO M3", "Harga" => 2469000, "url_gambar"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa9CZfTHq8xeemqUhx-hqynbWrvvALWy_0Jw&s", "spec"=>array("4GB", "4G", "6000mAH", "128GB"))
         , array("SKU"=>"AR005", "Merk"=>"Redmi", "Model"=>"Note 12", "Harga"=>3729000, "url_gambar"=>"https://i01.appmifile.com/webfile/globalimg/id/cms/3E7C39EE-E38A-31B1-B9FC-06246776D87B!800x800!85.jpg" ,"spec"=>array("6GB", "5G", "5000mAH", "256GB"))
         , array("SKU"=>"AO004", "Merk" => "Oppo", "Model"=>"A78 5G", "Harga"=>3999000, "url_gambar"=>"https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/107/MTA-137982338/oppo_hp-oppo-a78-5g-8-128-gb-5000mah_full9.jpg", "spec"=>array("8GB", "5G", "5000mAH", "128GB"))       
-        
     );
 
 ?>
@@ -45,7 +44,8 @@
         <div id="navbar">
             <div class="navbar-container">
                 <img src="https://picsum.photos/200/200" class="img-navbar">
-                <h1>Toko Hape</h1>             
+                <h1>Toko Hape</h1>
+                <button id="toggle-dark-mode" class="toggle-button">🌙</button>
             </div>
         </div>
         <div id="content">
@@ -71,10 +71,10 @@
                                 </div>
                                 
                             </div>
-                            <label for="hape<?php echo $value['SKU']; ?>">
+                            <div class="checkbox-container">
                                 <input class="checkbox" type="checkbox" name="hape[]" value="<?php echo $value['SKU']; ?>" id="hape<?php echo $value['SKU'];?>">
-                            Pilih</label>
-                             
+                                <label for="hape<?php echo $value['SKU']; ?>">Pilih</label>
+                            </div>
                             <input type="hidden" name="merk_<?php echo $value['SKU']; ?>" value="<?php echo $value['Merk']; ?>">
                             <input type="hidden" name="model_<?php echo $value['SKU']; ?>" value="<?php echo $value['Model']; ?>">
                             <input type="hidden" name="harga_<?php echo $value['SKU']; ?>" value="<?php echo $value['Harga']; ?>">
@@ -114,7 +114,11 @@
                 // Call updateCheckedCount function when checkbox state changes
                 updateCheckedCount();
             });
-            
+
+            // Toggle dark mode
+            $('#toggle-dark-mode').click(function() {
+                $('body').toggleClass('dark-mode');
+            });
         });
     </script>
 </body>
