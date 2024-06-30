@@ -19,7 +19,7 @@ $arrHape = array(
     array("SKU" => "AS005", "Merk" => "Samsung", "Model" => "Galaxy S21 FE", "Harga" => 9999000, "url_gambar" => "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//108/MTA-95639066/samsung_samsung_galaxy_s21_fe_smartphone_-8-256gb-_full07_e6311212.jpg", "spec" => array("6GB", "5G", "5000mAH", "256GB")), 
     array("SKU" => "AX005", "Merk" => "Xiaomi", "Model" => "POCO M3", "Harga" => 2469000, "url_gambar" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa9CZfTHq8xeemqUhx-hqynbWrvvALWy_0Jw&s", "spec" => array("4GB", "4G", "6000mAH", "128GB")), 
     array("SKU" => "AR005", "Merk" => "Redmi", "Model" => "Note 12", "Harga" => 3729000, "url_gambar" => "https://i01.appmifile.com/webfile/globalimg/id/cms/3E7C39EE-E38A-31B1-B9FC-06246776D87B!800x800!85.jpg", "spec" => array("6GB", "5G", "5000mAH", "256GB")), 
-    array("SKU" => "AO004", "Merk" => "Oppo", "Model" => "A78 5G", "Harga" => 3999000, "url_gambar" => "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/107/MTA-137982338/oppo_hp-oppo-a78-5g-8-128-gb-5000mah_full9.jpg", "spec" => array("8GB", "5G", "5000mAH", "128GB"))
+    array("SKU" => "AO005", "Merk" => "Oppo", "Model" => "A78 5G", "Harga" => 3999000, "url_gambar" => "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/107/MTA-137982338/oppo_hp-oppo-a78-5g-8-128-gb-5000mah_full9.jpg", "spec" => array("8GB", "5G", "5000mAH", "128GB"))
 );
 
 ?>
@@ -34,6 +34,7 @@ $arrHape = array(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style type="text/css">
         input[type='checkbox']:checked {
             background-color: orangered;
@@ -43,11 +44,21 @@ $arrHape = array(
 
 <body>
     <div class="container">
+    <button id="toggle-dark-mode" class="toggle-button">🌙</button>
         <div id="navbar">
             <div class="navbar-container">
-                <img src="https://picsum.photos/200/200" class="img-navbar">
-                <h1>Toko Hape</h1>
-                <button id="toggle-dark-mode" class="toggle-button">🌙</button>
+                <div class="navbar-description">
+                    <img src="https://picsum.photos/200/200" class="img-navbar">
+                    <h1><strong>TOKO HAPE</strong></h1>
+                    <br>
+                    <div id="member">
+                        <ul>
+                            <li>Fanny Rorencia Ribowo - 160422005</li>
+                            <li>Kresnayana Nanda Arifink - 160422071</li>
+                            <li>Christopher - 160422073</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="content">
