@@ -12,7 +12,7 @@ if (isset($_POST['hape'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web Programming UAS</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -54,6 +54,9 @@ if (isset($_POST['hape'])) {
                         </div>
                     </div>
                 <?php endforeach; ?>
+            </div>
+            <div class="back">
+                <a href="index.php">Kembali</a>
             </div>
         </div>
         <script src="js/jquery-3.5.1.min.js"></script>

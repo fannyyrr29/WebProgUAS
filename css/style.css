@@ -240,8 +240,10 @@ body.dark-mode input[type='checkbox']:checked+label {
     background-color: #C5C6C7;
 }
 
-/* @media only screen and (max-width: 800px) {
-    .toggle-button {
-      right: 0;
-    }
-} */
+body.dark-mode a{
+    color:#45A29E ;
+}
+
+a{
+    color: #3d52a0;
+}
