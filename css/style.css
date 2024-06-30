@@ -110,7 +110,7 @@ body.dark-mode #content {
 }
 
 .card-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #3D52A0;
     font-weight: bold;
 }
@@ -130,7 +130,7 @@ body.dark-mode .card-title {
 }
 #price {
     margin: 10px 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #66FCF1;
     font-weight: bold;
 }
@@ -150,7 +150,7 @@ body.dark-mode #price {
     background-color: #FFF;
     border-radius: 10px;
     width: 300px;
-    height: 500px;
+    height: 520px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     padding: 20px;
@@ -209,10 +209,6 @@ body.dark-mode .card-spec {
 /* Styling for checkbox and label */
 
 .checkbox-container {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
     text-align: center;
 }
 
