@@ -116,7 +116,7 @@ body.dark-mode #content {
 }
 
 .toggle-button{
-    position: absolute; 
+    position: fixed; 
     right: 1rem;
     top: 1rem;
     background-color: rgba(255, 255, 255, 0.6);
@@ -240,8 +240,8 @@ body.dark-mode input[type='checkbox']:checked+label {
     background-color: #C5C6C7;
 }
 
-/* @media only screen and (max-width: 1450px) {
-    #content {
-        padding: 20px 15px;
+/* @media only screen and (max-width: 800px) {
+    .toggle-button {
+      right: 0;
     }
 } */
